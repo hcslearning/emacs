@@ -1,0 +1,48 @@
+#+title: ORG Mode
+#+author: Santiago Neira
+#+date: 2024-12-07
+
+* Spreadsheet
+-----------------------------------------
+
+- 
+
+| Item      | Cant | Precio | Total |
+|-----------+------+--------+-------|
+| Manzanas  |    3 |    200 |   600 |
+| Naranjas  |    2 |    300 |   600 |
+| Plátanos  |    5 |    400 |  2000 |
+|-----------+------+--------+-------|
+| **TOTAL** |   10 |    900 | 12200 |
+|-----------+------+--------+-------|
+#+TBLFM: $4=$2*$3::@>$4=vsum(@2$4..@>$4)
+
+
+* Listas
+----------------------------------------
+
+- Las listas no ordenadas comienzan con: -, + o * (esta última con indentación)
+- Las listas ordenadas usan un número seguido de punto (.) o paréntesis, ejemplo: 1. ó 1)
+
+
+* Tareas
+-----------------------------------------
+
+** Con CTRL-c CTRL-t se cambia entre estados
+** TODO Lavar platos <2025-01-25 Sat>
+** DONE Aprender Org Mode
+
+
+* Niveles Colapsables
+-------------------------------------------
+
+Con TAB es posible ir colapsando los niveles.
+Dolor asit atme consequeum.
+
+** 2do nivel
+
+Lorem ipsum 2do nivel
+
+*** 3er nivel
+
+Lorem ipsum 3er nivel

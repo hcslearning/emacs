@@ -1,0 +1,6 @@
+# Ignorar todos los archivos de respaldo de Emacs
+*~
+# Ignorar archivos de bloqueo de Emacs
+.#*
+# Ignorar directorio temporal de Emacs
+auto-save-list/

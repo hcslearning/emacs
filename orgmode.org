@@ -2,20 +2,52 @@
 #+author: Santiago Neira
 #+date: 2024-12-07
 
+* Básico
+----------------------------------------
+
+- Copiar ALT + w
+- Cortar CTRL + w 
+- Pegar CTRL + y
+- Undo CTRL + /
+- Redo 
+- CTRL + k elimina línea
+
 * Spreadsheet
 -----------------------------------------
 
-- 
+- Las tablas comienzan con |
+- Con |- más TAB se crea la linea divioria horizontal
+- También se puede crear una línea horizontal con CTRL + c + -
+- Después de escribir en una celda con TAB te mueves a la siguiente
+- Después de apretar TAB la tabla crece y se alinea automáticamente en caso de ser necesario
+- ALT + LEFT o RIGHT mueve la columna actual hacia la izquierda o derecha
+- ALT + Arriba o Abajo mueve la fila hacia arriba o abajo
+- ALT + Shift + Left o Right elimina o agrega una nueva columna
+- ALT + Shift + Top o Down elimina o agrega una fila
+- CTRL + c + ^ con el cursos en la columna y selecciona la forma de orden
 
-| Item      | Cant | Precio | Total |
-|-----------+------+--------+-------|
-| Manzanas  |    3 |    200 |   600 |
-| Naranjas  |    2 |    300 |   600 |
-| Plátanos  |    5 |    400 |  2000 |
-|-----------+------+--------+-------|
-| **TOTAL** |   10 |    900 | 12200 |
-|-----------+------+--------+-------|
-#+TBLFM: $4=$2*$3::@>$4=vsum(@2$4..@>$4)
+| Num | Producto | Cant | Precio Unit | Subtotal |
+|-----+----------+------+-------------+----------|
+|   1 | Manzanas |    3 |         300 |          |
+|   2 | Naranjas |    5 |         400 |          |
+|   3 | Piñas    |    3 |        2000 |          |
+|-----+----------+------+-------------+----------|
+|     | TOTAL    |      |             |          |
+
+
+
+** Formulas
+
+*** Referencias
+
+- CTRL + c + ? muestra la info de la celda en la parte posterior
+- CTRL + c + } muestra directamente en la tabla la info de columnas y filas
+- Referencias pueden ser en formato común letter/number, ej, A1, B2, C10
+- Y también en formato @Row$Column, ejemplo, @1$2, @1$1, etc
+
+**** Referencias Relativas
+
+- 
 
 
 * Listas
@@ -23,7 +55,7 @@
 
 - Las listas no ordenadas comienzan con: -, + o * (esta última con indentación)
 - Las listas ordenadas usan un número seguido de punto (.) o paréntesis, ejemplo: 1. ó 1)
-
+ 
 
 * Tareas
 -----------------------------------------

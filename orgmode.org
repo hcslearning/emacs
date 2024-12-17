@@ -55,6 +55,8 @@
 - Van al final de la tabla con #+TBLFM:
 - Si hay más de una fórmula se separa con ::
 - Se coloca ; para separar el formato que se quiere aplicar
+- CTRL+u, CTRL+c, CTRL+c para recomputar la tabla
+  
 *** Referencias
 
 - CTRL + c + ? muestra la info de la celda en la parte posterior

@@ -2,15 +2,28 @@
 #+author: Santiago Neira
 #+date: 2024-12-07
 
-* Básico
+* Básico de Emacs
 ----------------------------------------
 
+- Abrir archivo CTRL + x CTRL + f
 - Copiar ALT + w
 - Cortar CTRL + w 
 - Pegar CTRL + y
 - Undo CTRL + /
+- Seleccionar todo CTRL + x + h
 - Redo 
 - CTRL + k elimina línea
+- Guardar CTRL + x CTRL + s
+- Salir de Emacs CTRL + x CTRL + c
+
+* Buffers
+----------------------------------------
+
+- Listar buffers CTRL+x, CTRL+b
+- Pantalla completa buffer actual CTRL + x + 1
+- Dividir horizontalmente CTRL + x + 2
+- Dividir verticalmente CTRL + x + 3
+- Cambiar entre buffers CTRL + x + o
 
 * Spreadsheet
 -----------------------------------------
@@ -25,6 +38,7 @@
 - ALT + Shift + Left o Right elimina o agrega una nueva columna
 - ALT + Shift + Top o Down elimina o agrega una fila
 - CTRL + c + ^ con el cursos en la columna y selecciona la forma de orden
+- CTRL + u CTRL + c CTRL + c Itera la tabla para recomputar los valores
 
 | Num | Producto | Cant | Precio Unit | Subtotal |
 |-----+----------+------+-------------+----------|
@@ -38,6 +52,9 @@
 
 ** Formulas
 
+- Van al final de la tabla con #+TBLFM:
+- Si hay más de una fórmula se separa con ::
+- Se coloca ; para separar el formato que se quiere aplicar
 *** Referencias
 
 - CTRL + c + ? muestra la info de la celda en la parte posterior
@@ -47,7 +64,9 @@
 
 **** Referencias Relativas
 
-- 
+- I representa la primera línea horizontal, II la 2da, y así sucesivamente
+- Se puede combinar con + ó - para indicar líneas arriba o debajo de, ejemplo, @I+1 es la fila inmediatamente debajo de la 1era línea horizontal y @I-1 es la línea superior.
+  
 
 
 * Listas

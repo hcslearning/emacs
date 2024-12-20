@@ -42,11 +42,12 @@
 
 | Num | Producto | Cant | Precio Unit | Subtotal |
 |-----+----------+------+-------------+----------|
-|   1 | Manzanas |    3 |         300 |          |
-|   2 | Naranjas |    5 |         400 |          |
-|   3 | Piñas    |    3 |        2000 |          |
+|   1 | Manzanas |    3 |         300 |      900 |
+|   2 | Naranjas |    5 |         400 |     2000 |
+|   3 | Piñas    |    3 |        2000 |     6000 |
 |-----+----------+------+-------------+----------|
-|     | TOTAL    |      |             |          |
+|     | TOTAL    |   11 |        2700 |     8900 |
+#+TBLFM: $5=$3*$4::@>$3=vsum(@I+1..@II-1)::@>$4=vsum(@I+1..@II-1)::@>$5=vsum(@I+1..@II-1)
 
 
 
@@ -68,7 +69,7 @@
 
 - I representa la primera línea horizontal, II la 2da, y así sucesivamente
 - Se puede combinar con + ó - para indicar líneas arriba o debajo de, ejemplo, @I+1 es la fila inmediatamente debajo de la 1era línea horizontal y @I-1 es la línea superior.
-  
+- < representa la primera fila y > la última, ejemplo, @>$1, quiere decir la última fila de la columna 1  
 
 
 * Listas

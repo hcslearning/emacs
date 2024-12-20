@@ -40,6 +40,7 @@
 - CTRL + c + ^ con el cursos en la columna y selecciona la forma de orden
 - CTRL + u CTRL + c CTRL + c Itera la tabla para recomputar los valores
 
+#+NAME: tabla_detalle
 | Num | Producto | Cant | Precio Unit | Subtotal |
 |-----+----------+------+-------------+----------|
 |   1 | Manzanas |    3 |         300 |      900 |
@@ -49,6 +50,12 @@
 |     | TOTAL    |   11 |        2700 |     8900 |
 #+TBLFM: $5=$3*$4::@>$3=vsum(@I+1..@II-1)::@>$4=vsum(@I+1..@II-1)::@>$5=vsum(@I+1..@II-1)
 
+#+NAME: tabla_resumen
+| Desc | Monto |
+|------+-------|
+| Neto |  8900 |
+| IVA  | 1691. |
+#+TBLFM: @2$2=remote(tabla_detalle,@>$5)::@3$2=@2$2*0.19;N
 
 
 ** Formulas
@@ -64,6 +71,8 @@
 - CTRL + c + } muestra directamente en la tabla la info de columnas y filas
 - Referencias pueden ser en formato común letter/number, ej, A1, B2, C10
 - Y también en formato @Row$Column, ejemplo, @1$2, @1$1, etc
+- Se puede nombrar una tabla usando #+NAME: nombre_tabla
+- Se puede referenciar un valor de otra tabla usando remote, ej, remote(otra_tabla, @1$2)
 
 **** Referencias Relativas
 
